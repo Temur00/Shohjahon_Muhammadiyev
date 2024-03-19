@@ -34,7 +34,7 @@ const Addproduct = () => {
   let [error, setError] = useState(true);
   let [Saqla, setSaqla] = useState(true);
 
-  const [img, setImg] = useState(null);
+  // const [img, setImg] = useState(null);
 
   const [product, setProduct] = useState<{ img: string | null }>({
     img: "",
@@ -42,7 +42,7 @@ const Addproduct = () => {
 
   const handleUploadImage = async (e: any) => {
     const img = e.target.files[0];
-    setImg(e.target.files[0]);
+    // setImg(e.target.files[0]);
     try {
       const storage = getStorage(app);
       const fileName = new Date().getTime() + "-" + img.name;
@@ -50,10 +50,10 @@ const Addproduct = () => {
       const uploadTask = uploadBytesResumable(storageRef, img);
       uploadTask.on(
         "state_changed",
-        (snapshot) => {
-          const progress =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        },
+        // (snapshot) => {
+        //   const progress =
+        //     (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        // },
         () => {},
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
