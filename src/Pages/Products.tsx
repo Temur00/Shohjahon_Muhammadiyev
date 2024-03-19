@@ -1,5 +1,4 @@
 import useStoreProducts from "../App/ProductsSet";
-import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import { Button } from "flowbite-react";
 import { Modal } from "flowbite-react";
@@ -12,10 +11,7 @@ const Products = () => {
     allProducts,
     getProducts,
     loading,
-    v,
     DaleteProduct,
-    GetIdProduct,
-    idsProduct,
     EdidProduct,
   } = useStoreProducts();
   let [a, setA] = useState(0);

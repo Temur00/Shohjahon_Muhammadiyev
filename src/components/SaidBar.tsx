@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 
-const SaidBar = ({ setUser }) => {
+const SaidBar = ({ setUser }:any) => {
   return (
     <div className=" w-[315px] rounded-2xl my-[5px] bg-white h-screen pl-[45px] mb-[10px] ml-[5px]">
       <div className=" flex items-center justify-start gap-3  py-[58px]">
@@ -22,15 +22,15 @@ const SaidBar = ({ setUser }) => {
 
       <div className="flex items-center justify-start gap-[12px]  pb-[30px]">
         <img src="shipping.svg" alt="" />
-        <Link className="text-[#CDCDCD] text-[24px]">Shipments</Link>
+        <div className="text-[#CDCDCD] text-[24px]">Shipments</div>
       </div>
       <div className="flex items-center justify-start gap-[12px]  pb-[30px]">
         <img src="payment.svg" alt="" />
-        <Link className="text-[#CDCDCD] text-[24px]">Transactions</Link>
+        <div  className="text-[#CDCDCD] text-[24px]">Transactions</div>
       </div>
       <div className="flex items-center justify-start gap-[12px]  pb-[30px]">
         <img src="setting.svg" alt="" />
-        <Link className="text-[#CDCDCD] text-[24px]">Settings</Link>
+        <div  className="text-[#CDCDCD] text-[24px]">Settings</div>
       </div>
       <div className="flex items-center justify-start gap-[12px]  pb-[30px]">
         <img src="logout.svg" alt="" />

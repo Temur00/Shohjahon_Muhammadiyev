@@ -1,6 +1,5 @@
-import React from "react";
 
-const Header = ({ User }) => {
+const Header = ({ User }:any) => {
   return (
     <div>
       <div className="conatiner flex items-center justify-between pt-[20px]">

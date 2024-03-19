@@ -1,5 +1,5 @@
-import { Button, ButtonGroup, FileInput } from "flowbite-react";
-import { useEffect, useState } from "react";
+import { Button, FileInput } from "flowbite-react";
+import { useState } from "react";
 import { Label, TextInput, Textarea, Select } from "flowbite-react";
 import {
   getDownloadURL,
@@ -9,17 +9,12 @@ import {
 } from "firebase/storage";
 import { app } from "../../firebase";
 import useStoreProducts from "../App/ProductsSet";
-import React, { ChangeEvent } from "react";
+import { ChangeEvent } from "react";
 
-import { Toast } from "flowbite-react";
-import { HiCheck, HiExclamation, HiX } from "react-icons/hi";
-import { NavLink, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const Addproduct = () => {
-  let [torf, setTorf] = useState(false);
-
-  let { allProducts, waites, setProducts, getProducts }: any =
-    useStoreProducts();
+  let { setProducts }: any = useStoreProducts();
 
   let [val, setVal] = useState<{
     name: string;

@@ -1,10 +1,10 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SaidBar from "./components/SaidBar";
 import Header from "./components/Header";
 import Addproduct from "./Pages/Addproduct";
 import Products from "./Pages/Products";
 import Login from "./Pages/Login";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function App() {
   const [User, setUser] = useState("");

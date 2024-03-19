@@ -1,7 +1,7 @@
-import { FloatingLabel, Button } from "flowbite-react";
-import { Link, NavLink, Navigate } from "react-router-dom";
+import { FloatingLabel } from "flowbite-react";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
-const Login = ({ setUser, User }: any) => {
+const Login = ({ setUser }: any) => {
   const [Change, setChange] = useState("");
   const handleSubmit = () => {
     // <Navigate to="/all" />;
