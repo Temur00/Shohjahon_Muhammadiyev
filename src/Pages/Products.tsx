@@ -13,8 +13,8 @@ type Products = {
   id: number; // Assuming id is a number, adjust if it's a string
 };
 const Products = () => {
-  // const [Search, setSearch] = useState("");
-  // const [Select, setSelect] = useState("");
+  const [Search, setSearch] = useState("");
+  const [Select, setSelect] = useState("");
   let { allProducts, getProducts, loading, DaleteProduct, EdidProduct } =
     useStoreProducts();
   let [a, setA] = useState(0);
@@ -73,13 +73,13 @@ const Products = () => {
           id=""
           placeholder="Searching..."
           className="rounded-lg"
-          // onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => setSearch(e.target.value)}
         />
         <select
           name="select"
           id="select"
           className="rounded-lg"
-          // onChange={(e) => setSelect(e.target.value)}
+          onChange={(e) => setSelect(e.target.value)}
         >
           <option value="">All products</option>
           <option value={"Furniture"}>Furniture</option>
@@ -107,16 +107,16 @@ const Products = () => {
                 <p className="">Action</p>
               </div>
               {allProducts
-                // .filter((e) => {
-                //   if (Search === "" && Select === "") {
-                //     return e;
-                //   } else if (
-                //     e.name.toLowerCase().includes(Search.toLowerCase()) &&
-                //     e.category.toLowerCase().includes(Select.toLowerCase())
-                //   ) {
-                //     return e;
-                //   }
-                // })
+                .filter((e) => {
+                  if (Search === "" && Select === "") {
+                    return e;
+                  } else if (
+                    e.name.toLowerCase().includes(Search.toLowerCase()) &&
+                    e.category.toLowerCase().includes(Select.toLowerCase())
+                  ) {
+                    return e;
+                  }
+                })
                 .map(
                   (
                     e: {
